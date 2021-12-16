@@ -1,0 +1,471 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+Nav {
+    position: relative;
+    width: 100%;
+    background-color: seagreen;
+    height: 4rem;
+    a {
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        padding-left: 4.2rem;
+        padding-top: 0.6rem;
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+    }
+    ul li {
+        color: rgb(255, 255, 255);
+    }
+    ul li:hover {
+        color: yellow;
+    }
+}
+.header {
+    height: 41rem;
+    width: 100%;
+    position: relative;
+    &_img {
+        height: 655px;
+        width: 100%;
+        background-image: linear-gradient(rgba(97, 101, 119, 0.8), #00000091), url(../img/home-bg.jpg);
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0%, 100% 86%, 0% 100%);
+        .header_content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            justify-content: center;
+            &_heading {
+                background-image: linear-gradient(to right bottom, black, yellow);
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+                text-transform: uppercase;
+                letter-spacing: 0.5rem;
+                width: 90rem;
+                font-family: "Lato", "sans-serif";
+                margin-bottom: 2rem;
+                font-size: 3rem;
+            }
+            &_text {
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 0.5rem;
+                width: 90rem;
+                font-family: "Lato", "sans-serif";
+                margin-bottom: 2rem;
+            }
+            & input,
+            :focus {
+                padding: 15px 20px;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                font-size: 16px;
+                width: 25rem;
+                margin-left: -7rem;
+                border: none;
+                outline: none;
+            }
+            &_btn {
+                background-color: seagreen;
+                color: white;
+                padding: 15px 20px;
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+                position: absolute;
+                font-size: 1rem;
+                border: none;
+                text-transform: capitalize;
+            }
+            &_btn:hover {
+                background-color: yellow;
+                color: black;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.section_1 {
+    position: relative;
+    width: 100%;
+    top: -8rem;
+    height: 50rem;
+    animation: colorchanging 5s linear infinite;
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0 100%);
+    &_left {
+        position: absolute;
+        width: 60%;
+        top: 2rem;
+        &_p {
+            position: absolute;
+            font-size: 2.5rem;
+            top: 12rem;
+            left: 6rem;
+            font-family: "Lato", sans-serif;
+            letter-spacing: 0.5rem;
+            text-transform: uppercase;
+        }
+        .section_1_menu {
+            position: absolute;
+            top: 16rem;
+            left: 6rem;
+            & ul li {
+                color: black;
+                font-size: 1rem;
+                font-weight: bold;
+                list-style: none;
+                font-family: "Lato", sans-serif;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 65px;
+                    opacity: 0;
+                    margin-left: -60px;
+                    height: 1.5rem;
+                    border-bottom: solid 4px rgb(238, 56, 56);
+                }
+                &:hover:after {
+                    opacity: 1;
+                }
+            }
+            /* transition: left 250ms ease-in-out, right 250ms ease-in-out; */
+        }
+    }
+    &_right {
+        width: 40%;
+        animation: moveInLeft 6s infinite;
+        transition: all 0.2s;
+        position: absolute;
+        left: 50rem;
+    }
+}
+
+.section_2 {
+    position: relative;
+    width: 100%;
+    height: 60rem;
+    top: -17rem;
+    padding-top: 110px;
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0 100%);
+    &_heading {
+        background-image: linear-gradient(to right, black, orangered);
+        text-align: center;
+        font-size: 3rem;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        transition: all 0.3s;
+        margin-top: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        font-family: "Lato", "sans-serif";
+    }
+    &_left {
+        position: absolute;
+        width: 20rem;
+        height: 33rem;
+        top: 18rem;
+        left: 9rem;
+        box-shadow: 0 0.5rem 1rem 0.1rem rgba(0, 0, 0, 0.2);
+        &_img {
+            height: 20rem;
+            width: 20rem;
+        }
+        &_img_h3 {
+            font-size: 2rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+        &_img_h4 {
+            font-size: 1.5rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+        &_img_p {
+            font-size: 1rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+    }
+    &_middle {
+        position: absolute;
+        height: 33rem;
+        width: 20rem;
+        top: 18rem;
+        left: 35.5rem;
+        box-shadow: 0 0.5rem 1rem 0.1rem rgba(0, 0, 0, 0.2);
+        &_img {
+            height: 20rem;
+            width: 20rem;
+        }
+        &_img_h3 {
+            font-size: 2rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+        &_img_h4 {
+            font-size: 1.5rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+        &_img_p {
+            font-size: 1rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+    }
+    &_right {
+        height: 33rem;
+        width: 20rem;
+        position: absolute;
+        top: 18rem;
+        left: 62rem;
+        box-shadow: 0 0.5rem 1rem 0.1rem rgba(0, 0, 0, 0.2);
+        &_img {
+            height: 20rem;
+            width: 20rem;
+        }
+        &_img_h3 {
+            font-size: 2rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+        &_img_h4 {
+            font-size: 1.5rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+        &_img_p {
+            font-size: 1rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+    }
+}
+.section_3 {
+    position: relative;
+    height: 651px;
+    width: 1347px;
+    &_img {
+        width: 600px;
+        height: 425px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+        border-radius: 2px;
+        position: absolute;
+        left: 75px;
+        z-index: 10;
+        transition: all 0.2s;
+        outline-offset: 2rem;
+        &:hover {
+            cursor: pointer;
+            outline: 1rem solid #28b485;
+            box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+            transform: scale(1.05) translateY(-5rem);
+            z-index: 20;
+        }
+    }
+    .section_3_right {
+        background-color: black;
+        height: 425px;
+        width: 595px;
+        position: absolute;
+        left: 51.5rem;
+        &_h1 {
+            color: white;
+            font-size: 45px;
+            padding-top: 80px;
+            padding-left: 60px;
+        }
+        &_p {
+            color: white;
+            padding-top: 20px;
+            padding-left: 70px;
+            line-height: 30px;
+            font-size: 21px;
+        }
+    }
+}
+.section_4 {
+    background-color: ghostwhite;
+    height: 651px;
+    position: relative;
+    padding-top: 130px;
+    &_h1 {
+        background-image: linear-gradient(to right, black, orangered);
+        display: inline-block;
+        position: absolute;
+        left: 500px;
+        font-size: 45px;
+        text-align: center;
+        animation: moveInBottom 2s;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        transition: all 0.3s;
+        &:hover {
+            transform: skewY(2deg) skewX(15deg) scale(1.1);
+            text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+        }
+    }
+    &_left {
+        background-color: white;
+        perspective: 1500px;
+        height: 290px;
+        width: 295px;
+        position: absolute;
+        transition: all 0.3s;
+        top: 215px;
+        left: 170px;
+        &:hover {
+            background-image: linear-gradient(rgba(234, 231, 123, 0.5), rgba(123, 129, 234, 0.5));
+            transform: translateY(-15px) scale(1.03);
+            cursor: pointer;
+        }
+        &_h3 {
+            width: 237px;
+            font-size: 28px;
+            padding-top: 25px;
+            border-bottom: 1px solid grey;
+            margin-left: 25px;
+        }
+        &_p {
+            color: grey;
+            font-size: 15px;
+            padding-top: 23px;
+            padding-left: 17px;
+            line-height: 26px;
+        }
+        &_p2 {
+            color: grey;
+            width: 240px;
+            line-height: 25px;
+            padding-top: 24px;
+            margin-left: 25px;
+            border-top: 1px solid grey;
+        }
+        &_button {
+            background-color: seagreen;
+            height: 39px;
+            color: white;
+            padding: 0px 25px;
+            border-radius: 30px;
+            position: absolute;
+            top: 14.5rem;
+            left: 135px;
+            border: 0;
+            &:hover {
+                background-color: black;
+                cursor: pointer;
+            }
+        }
+    }
+    .section_4_middle {
+        background-color: white;
+        height: 290px;
+        width: 295px;
+        position: absolute;
+        transition: all 0.3s;
+        top: 215px;
+        left: 497px;
+        &:hover {
+            background-image: linear-gradient(rgba(234, 231, 123, 0.5), rgba(123, 129, 234, 0.5));
+            transform: translateY(-15px) scale(1.03);
+            cursor: pointer;
+        }
+        &_h3 {
+            width: 237px;
+            font-size: 28px;
+            padding-top: 25px;
+            margin-left: 25px;
+        }
+        &_p {
+            color: grey;
+            width: 240px;
+            line-height: 25px;
+            padding-top: 24px;
+            margin-left: 25px;
+            border-top: 1px solid grey;
+        }
+        &_p2 {
+            color: grey;
+            width: 240px;
+            line-height: 25px;
+            padding-top: 24px;
+            margin-left: 25px;
+            border-top: 1px solid grey;
+        }
+        &_button {
+            background-color: seagreen;
+            height: 39px;
+            color: white;
+            padding: 0px 25px;
+            border-radius: 30px;
+            position: absolute;
+            top: 14.5rem;
+            left: 135px;
+            border: 0;
+            &:hover {
+                background-color: black;
+                cursor: pointer;
+            }
+        }
+    }
+    .section_4_right {
+        background-color: white;
+        height: 290px;
+        width: 295px;
+        position: absolute;
+        transition: all 0.3s;
+        top: 215px;
+        left: 825px;
+        &:hover {
+            background-image: linear-gradient(rgba(234, 231, 123, 0.5), rgba(123, 129, 234, 0.5));
+            transform: translateY(-15px) scale(1.03);
+            cursor: pointer;
+        }
+        &_h3 {
+            font-size: 28px;
+            padding-top: 25px;
+            margin-left: 25px;
+        }
+        &_p {
+            color: grey;
+            width: 240px;
+            line-height: 25px;
+            padding-top: 24px;
+            margin-left: 25px;
+            border-top: 1px solid grey;
+        }
+        &_p2 {
+            color: grey;
+            font-size: 15px;
+            width: 237px;
+            border-top: 1px solid grey;
+            margin-left: 31px;
+            padding-top: 23px;
+            line-height: 26px;
+        }
+        &_button {
+            background-color: seagreen;
+            height: 39px;
+            color: white;
+            padding: 0px 25px;
+            border-radius: 30px;
+            position: absolute;
+            top: 14.5rem;
+            left: 135px;
+            border: 0;
+            &:hover {
+                background-color: black;
+                cursor: pointer;
+            }
+        }
+    }
+}
